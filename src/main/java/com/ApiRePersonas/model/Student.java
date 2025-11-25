@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "estudiantes")
-public class Estudent {
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,9 +38,9 @@ public class Estudent {
     @Column(name = "telefonoTutor", nullable = true, length = 12, unique = true)
     private String telefonoTutor;
 
-    public Estudent(String nombres, String apellidoPaterno, String apellidoMaterno,
-                    int edad, String correoAlumno, String telefonoAlumno,
-                    String correoTutor, String telefonoTutor) {
+    public Student(String nombres, String apellidoPaterno, String apellidoMaterno,
+                   int edad, String correoAlumno, String telefonoAlumno,
+                   String correoTutor, String telefonoTutor) {
         this.nombres = nombres;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
