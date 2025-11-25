@@ -2,6 +2,13 @@ package com.ApiRePersonas.model;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "estudiantes")
@@ -22,11 +29,13 @@ public class Estudent {
     //Datos de contacto alumno
     @Column(name = "correoAlumno", nullable = true, length = 100, unique = true)
     private String correoAlumno;
-    
+    @Column(name = "telefonoAlumno", nullable = true, length = 12, unique = true)
     private String telefonoAlumno;
 
     //Datos de contacto del tutor
+    @Column(name = "correoTutor", nullable = true, length = 100, unique = true)
     private String correoTutor;
+    @Column(name = "telefonoTutor", nullable = true, length = 12, unique = true)
     private String telefonoTutor;
 
     public Estudent(String nombres, String apellidoPaterno, String apellidoMaterno,
